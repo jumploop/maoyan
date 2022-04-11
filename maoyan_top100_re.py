@@ -50,7 +50,7 @@ def write_to_file(content):
 
 def run(offset):
     """执行函数"""
-    url = 'http://maoyan.com/board/4?offset=' + str(offset)
+    url = f'http://maoyan.com/board/4?offset={str(offset)}'
     html = get_one_page(url)
     for item in parse_one_page(html):
         print(item)
